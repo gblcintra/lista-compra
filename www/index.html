@@ -58,10 +58,16 @@
       <ion-content  style="background: #bdbdbd20;">
         <div class="row">
           <div class="col col-50">
-            <button class="button button-block button-positive" ng-click="onItemAdd()" ; style="font-size:20px";><i class="ion-ios-compose-outline" style="font-size:25px"></i>  Adicionar</button>
+            <button class="button button-block button-positive" ng-click="onItemAdd()" ; style="font-size:20px";>
+              <i class="ion-ios-compose-outline" style="font-size:25px"></i>
+              Adicionar
+            </button>
           </div>
           <div class="col col-50">
-            <button class="button button-block button-assertive" ng-click="onClickRemove()" ; style="font-size:20px";><i class="ion-trash-b" style="font-size:25px"></i>  Remover</button>
+            <button class="button button-block button-assertive" ng-click="onClickRemove()" ; style="font-size:20px";>
+              <i class="ion-trash-b" style="font-size:25px"></i>
+              Remover
+            </button>
           </div>
         </div>
         <ion-list show-delete="removeStatus">
@@ -73,7 +79,8 @@
                 <ion-option-button class="button-royal" ng-click="onItemEdit(item)" style="color:white"><i class="ion-ios-gear"> Editar</i></ion-option-button>
               </div>
               <div class="col col-20">
-              <button class="button button-small button-positive button-outline" ng-click="onMarkTask(item)"><i class="icon ion-checkmark" ng-show="item.finalizada"></i><br>
+              <button class="button button-small button-positive button-outline" ng-click="onMarkTask(item)">
+                <i class="icon ion-checkmark" ng-show="item.finalizada"></i><br>
               </button><label style="font-size:20px"> Finalizar</label></div>
             </div>
           </ion-item>
