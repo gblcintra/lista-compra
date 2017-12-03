@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>Lista de Produtos</title>
 
     <link rel="manifest" href="manifest.json">
 
@@ -37,48 +37,44 @@
   <body ng-app="starter">
 
     <ion-pane ng-controller="mainController">
-      <ion-header-bar class="bar-energized">
-        <h1 class="title" style="text-align:center;">Projeto</h1>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title" style="text-align:center; font-size:20px;"><i class="ion-ios-cart-outline" style="font-size:25px"></i> Lista de Compras</h1>
       </ion-header-bar>
-      <ion-footer-bar class="bar-calm">
-        <ion-footer-bar class="bar-calm">
-          <div class="row">
-            <div class="col col-80" :="" <strong="">Exibir finalizadas
-            </div>
-            <div class="col col-20">
-              <label class="toggle">
-                <input type="checkbox" ng-model="showMarked">
-                  <div class="track">
-                    <div class="handle">
-                    </div>
-                  </div>
-
-              </label>
-            </div>
-          </div>
-        </ion-footer-bar>
-      </ion-footer-bar>
-      <ion-content>
+      <ion-footer-bar class="bar-dark">
         <div class="row">
-          <div class="col col-50">
-            <button class="button button-block button-positive" ng-click="onItemAdd()">Adicionar</button>
+          <div class="col col-90" :="" <strong="" style="font-size:20px;margin:-5px"><i class="ion-checkmark-round"> Exibir finalizadas</i>
           </div>
-          <div class="col col-50">
-            <button class="button button-block button-assertive" ng-click="onClickRemove()">Remover</button>
+          <div class="col col-10">
+            <label class="toggle toggle-assertive" style="margin: -13px">
+              <input type="checkbox" ng-model="showMarked">
+                <div class="track">
+                  <div class="handle">
+                  </div>
+                </div>
+            </label>
           </div>
         </div>
-
+      </ion-footer-bar>
+      <ion-content  style="background: #bdbdbd20;">
+        <div class="row">
+          <div class="col col-50">
+            <button class="button button-block button-positive" ng-click="onItemAdd()" ; style="font-size:20px";><i class="ion-ios-compose-outline" style="font-size:25px"></i>  Adicionar</button>
+          </div>
+          <div class="col col-50">
+            <button class="button button-block button-assertive" ng-click="onClickRemove()" ; style="font-size:20px";><i class="ion-trash-b" style="font-size:25px"></i>  Remover</button>
+          </div>
+        </div>
         <ion-list show-delete="removeStatus">
           <ion-item ng-repeat="item in list track by $index" ng-hide="onHideItem(item)">
             <div class="row">
-              <div class="col col-90">
-                {{item.nome}}
+              <div class="col col-80">
+                <label style="font-size:20px;">{{item.nome}}</label>
                 <ion-delete-button class="ion-minus-circled" ng-click="onItemRemove(item)"></ion-delete-button>
-                <ion-option-button class="button-positive" ng-click="onItemEdit(item)">Editar</ion-option-button>
+                <ion-option-button class="button-royal" ng-click="onItemEdit(item)" style="color:white"><i class="ion-ios-gear"> Editar</i></ion-option-button>
               </div>
-              <div class="col col10">
+              <div class="col col-20">
               <button class="button button-small button-positive button-outline" ng-click="onMarkTask(item)"><i class="icon ion-checkmark" ng-show="item.finalizada"></i><br>
-              </button></div>
+              </button><label style="font-size:20px"> Finalizar</label></div>
             </div>
           </ion-item>
         </ion-list>

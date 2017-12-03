@@ -53,11 +53,11 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
     $ionicListDelegate.closeOptionButtons();
   };
 
-
   $scope.onMarkTask = function(item){
     item.finalizada = !item.finalizada;
     tasks.save();
   };
+
 
   $scope.onHideItem = function(item){
     return item.finalizada && !$scope.showMarked;
@@ -71,8 +71,16 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
     tasks.save();
   };
   $scope.onItemRemove = function(item){
-    tasks.remove(item);
-    tasks.save();
+    $ionicPopup.confirm({
+      title: 'Confirmação de Remoção',
+      template: 'Você deseja realmente remover o item?'
+      }).then(function(res) {
+        if(res){
+          tasks.remove(item);
+          tasks.save();
+        }
+      });
+      return;
   };
   $scope.onClickRemove = function() {
     $scope.removeStatus = !$scope.removeStatus
