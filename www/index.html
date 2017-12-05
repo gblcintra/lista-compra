@@ -58,13 +58,13 @@
       <ion-content style="background: url(img/carrinho.png) no-repeat center center fixed #444444f5;">
         <div class="row">
           <div class="col col-50">
-            <button class="button button-block button-balanced" ng-click="onItemAdd()" ;="" style="font-size:20px">
+            <button class="button button-block button-balanced" ng-click="onItemAdd()" ;="" style="font-size:20px; border-radius: 25px !important;">
               <i class="ion-ios-compose-outline" style="font-size:25px"></i>
               Adicionar
             </button>
           </div>
           <div class="col col-50">
-            <button class="button button-block button-assertive" ng-click="onClickRemove()" ;="" style="font-size:20px">
+            <button class="button button-block button-assertive" ng-click="onClickRemove()" ;="" style="font-size:20px; border-radius: 25px !important;">
               <i class="ion-trash-b" style="font-size:25px"></i>
               Remover
             </button>
@@ -76,7 +76,7 @@
               <div class="col col-80">
                 <label style="font-size:20px;">{{item.nome}}</label>
                 <ion-delete-button class="button-assertive" style="background:#ef473a" ng-click="onItemRemove(item)"><i class="ion-ios-minus-outline" style="color:white;margin-left: 5px;"></i></ion-delete-button>
-                <ion-option-button class="button-positive" ng-click="onItemEdit(item)"><i class="ion-ios-gear"> Editar</i></ion-option-button>
+                <ion-option-button class="button-royal" ng-click="onItemEdit(item)"><i class="ion-ios-gear"> Editar</i></ion-option-button>
               </div>
               <div class="col col-20">
               <button class="button button-small button-positive button-outline" ng-click="onMarkTask(item)">

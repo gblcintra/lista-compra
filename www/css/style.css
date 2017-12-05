@@ -1,12 +1,22 @@
-.item-content{
+/*.item-content{
   background: #f1f1f1 !important;
   border-radius: 25px !important;
-
 }
+
+.item{
+  background-color: #444444 !important;
+  border-color: #0000 !important;
+}
+
+.item-delete{
+  background: #ef473a !important;
+  border-radius: 25px !important;
+}*/
+
 .button-assertive{
   /*background-color: white !important;
   color: black !important;*/
-  border-radius: 25px !important;
+  /*border-radius: 25px !important;*/
   /*border: 2px solid #ef473a !important;*/
 }
 
@@ -14,6 +24,10 @@
   background-color: #ef473a !important;
   color: white !important;
 }*/
+
+.button-royal{
+  background: #387ef5 !important;
+}
 
 .button-positive{
   /*background-color: white !important;
@@ -25,7 +39,7 @@
 .button-balanced{
   /*background-color: white !important;
   color: black !important;*/
-  border-radius: 25px !important;
+  /*border-radius: 25px !important;*/
   /*border: 2px solid #387ef5 !important;*/
 }
 
