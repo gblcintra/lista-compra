@@ -39,25 +39,34 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
       scope:$scope,
       template:"<input type='text' placeholder='Tarefa'autofocus='true' ng-model='data.newTasks'>",
       buttons:[
+        {text:'Cancelar'},
         {text:'Ok',
+        type: 'button-positive',
         onTap: function(e){
           item.nome = $scope.data.newTasks;
+          if(item.nome == undefined || item.nome ==""){
+            $ionicPopup.alert({
+              title: 'Campo vazio!',
+              template: '<div style="text-align:center">Campo Vazio, favor escrever o nome do item!</div>'
+            }).then(function(res) {});
+            return;
+            }
           if(novo){
             tasks.add(item);
           }
           tasks.save();
         }},
-        {text:'Cancelar'}
+
       ]
     });
     $ionicListDelegate.closeOptionButtons();
   };
 
-
   $scope.onMarkTask = function(item){
     item.finalizada = !item.finalizada;
     tasks.save();
   };
+
 
   $scope.onHideItem = function(item){
     return item.finalizada && !$scope.showMarked;
@@ -71,8 +80,16 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
     tasks.save();
   };
   $scope.onItemRemove = function(item){
-    tasks.remove(item);
-    tasks.save();
+    $ionicPopup.confirm({
+      title: 'Confirmação de Remoção',
+      template: '<div style="text-align:center">Você deseja realmente remover o item?</div>'
+      }).then(function(res) {
+        if(res){
+          tasks.remove(item);
+          tasks.save();
+        }
+      });
+      return;
   };
   $scope.onClickRemove = function() {
     $scope.removeStatus = !$scope.removeStatus
