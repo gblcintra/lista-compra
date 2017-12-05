@@ -39,15 +39,24 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
       scope:$scope,
       template:"<input type='text' placeholder='Tarefa'autofocus='true' ng-model='data.newTasks'>",
       buttons:[
+        {text:'Cancelar'},
         {text:'Ok',
+        type: 'button-positive',
         onTap: function(e){
           item.nome = $scope.data.newTasks;
+          if(item.nome == undefined || item.nome ==""){
+            $ionicPopup.alert({
+              title: 'Campo vazio!',
+              template: '<div style="text-align:center">Campo Vazio, favor escrever o nome do item!</div>'
+            }).then(function(res) {});
+            return;
+            }
           if(novo){
             tasks.add(item);
           }
           tasks.save();
         }},
-        {text:'Cancelar'}
+
       ]
     });
     $ionicListDelegate.closeOptionButtons();
@@ -73,7 +82,7 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
   $scope.onItemRemove = function(item){
     $ionicPopup.confirm({
       title: 'Confirmação de Remoção',
-      template: 'Você deseja realmente remover o item?'
+      template: '<div style="text-align:center">Você deseja realmente remover o item?</div>'
       }).then(function(res) {
         if(res){
           tasks.remove(item);
