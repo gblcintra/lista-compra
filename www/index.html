@@ -45,7 +45,7 @@
           <div class="col col-90" :="" <strong="" style="font-size:20px;margin:-5px"><i class="ion-checkmark-round"> Exibir finalizadas</i>
           </div>
           <div class="col col-10">
-            <label class="toggle toggle-assertive" style="margin: -13px">
+            <label class="toggle toggle-balanced" style="margin: -13px">
               <input type="checkbox" ng-model="showMarked">
                 <div class="track">
                   <div class="handle">
@@ -55,10 +55,10 @@
           </div>
         </div>
       </ion-footer-bar>
-      <ion-content style="background: url(img/carrinho.png) no-repeat center center fixed #dedede4f;">
+      <ion-content style="background: url(img/carrinho.png) no-repeat center center fixed #444444f5;">
         <div class="row">
           <div class="col col-50">
-            <button class="button button-block button-positive" ng-click="onItemAdd()" ; style="font-size:20px";>
+            <button class="button button-block button-balanced" ng-click="onItemAdd()" ; style="font-size:20px";>
               <i class="ion-ios-compose-outline" style="font-size:25px"></i>
               Adicionar
             </button>
@@ -75,8 +75,8 @@
             <div class="row">
               <div class="col col-80">
                 <label style="font-size:20px;">{{item.nome}}</label>
-                <ion-delete-button class="ion-minus-circled" ng-click="onItemRemove(item)"></ion-delete-button>
-                <ion-option-button class="button-royal" ng-click="onItemEdit(item)" style="color:white"><i class="ion-ios-gear"> Editar</i></ion-option-button>
+                <ion-delete-button class="button-assertive" style="background:#ef473a" ng-click="onItemRemove(item)"><i class="ion-ios-minus-outline" style="color:white;margin-left: 5px;"></i></ion-delete-button>
+                <ion-option-button class="button-positive" ng-click="onItemEdit(item)"><i class="ion-ios-gear"> Editar</i></ion-option-button>
               </div>
               <div class="col col-20">
               <button class="button button-small button-positive button-outline" ng-click="onMarkTask(item)">
