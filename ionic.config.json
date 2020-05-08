@@ -1,4 +1,12 @@
 {
   "name": "Projeto",
-  "app_id": "9855246b"
+  "integrations": {},
+  "type": "ionic1",
+  "id": "9855246b",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }
