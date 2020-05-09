@@ -1,63 +1,35 @@
-/*.item-content{
-  background: #f1f1f1 !important;
-  border-radius: 25px !important;
+
+label{
+  font-size: 20px;
 }
 
-.item{
-  background-color: #444444 !important;
-  border-color: #0000 !important;
+
+
+.crud-button{
+  display: flex;
+  position: absolute;
+  bottom: 0;
 }
 
-.item-delete{
-  background: #ef473a !important;
-  border-radius: 25px !important;
-}*/
-
-.button-assertive{
-  /*background-color: white !important;
-  color: black !important;*/
-  /*border-radius: 25px !important;*/
-  /*border: 2px solid #ef473a !important;*/
+.inline{
+  display: inline-flex;
 }
 
-/*.button-assertive:hover{
-  background-color: #ef473a !important;
-  color: white !important;
-}*/
-
-.button-royal{
-  background: #387ef5 !important;
+.view-finish{
+  display: inline-flex;
 }
 
-.button-positive{
-  /*background-color: white !important;
-  color: black !important;*/
-  border-radius: 25px !important;
-  /*border: 2px solid #387ef5 !important;*/
+.toggle{
+  margin: -13px -25px;
 }
 
-.button-balanced{
-  /*background-color: white !important;
-  color: black !important;*/
-  /*border-radius: 25px !important;*/
-  /*border: 2px solid #387ef5 !important;*/
+.crud-button .button-clear{
+  width: 100%;
+  align-items: center;
+  text-align: center;
 }
 
-.button-default{
-  border-radius: 25px !important;
-}
-
-/*.button-positive:hover{
-  background-color: #387ef5 !important;
-  color: white !important;
-}*/
-
-.item{
-  background-color: #444444 !important;
-  border-color: #0000 !important;
-}
-
-.item-delete{
-  background: #ef473a !important;
-  border-radius: 25px !important;
+.crud-button .button-clear i{
+  margin: auto;
+  font-size: 40px;
 }

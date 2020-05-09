@@ -47,7 +47,7 @@ app.controller('mainController',function($scope, $ionicPopup, $ionicListDelegate
           if(item.nome == undefined || item.nome ==""){
             $ionicPopup.alert({
               title: 'Campo vazio!',
-              template: '<div style="text-align:center">Campo Vazio, favor escrever o nome do item!</div>'
+              template: '<div class="center-align">Campo Vazio, favor escrever o nome do item!</div>'
             }).then(function(res) {});
             return;
             }
