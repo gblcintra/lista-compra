@@ -1,26 +1,35 @@
-.bg-app{
-  background: url(/img/carrinho.png) no-repeat center fixed #444444f5;
-}
 
-.button-royal{
-  background: #387ef5;
-}
-
-.button-positive{
-  border-radius: 25px;
+label{
+  font-size: 20px;
 }
 
 
-.button-default{
-  border-radius: 25px;
+
+.crud-button{
+  display: flex;
+  position: absolute;
+  bottom: 0;
 }
 
-.item{
-  background-color: #444444;
-  border-color: #0000;
+.inline{
+  display: inline-flex;
 }
 
-.item-delete{
-  background: #ef473a;
-  border-radius: 25px;
+.view-finish{
+  display: inline-flex;
+}
+
+.toggle{
+  margin: -13px -25px;
+}
+
+.crud-button .button-clear{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.crud-button .button-clear i{
+  margin: auto;
+  font-size: 40px;
 }
