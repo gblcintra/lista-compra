@@ -5,3 +5,4 @@
 <h4>Nela, quando o item for pego, o usuario pode selecionar o textbox para ocutar o item da lista de compra</h4>
 <h4>Caso o usuario selecione sem querer o item para ocultar, embaixo terá um botão para mostrar os itens ocultos</h4>
 
+<img src="https://github.com/gblcintra/lista-compra/blob/master/www/img/Alista-de-compra.gif"/>
